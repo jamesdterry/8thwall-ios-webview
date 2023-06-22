@@ -14,6 +14,7 @@
 		FBD79B1F2A4238FC006F9679 /* WKWebviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD79B1E2A4238FC006F9679 /* WKWebviewTests.swift */; };
 		FBD79B292A4238FC006F9679 /* WKWebviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD79B282A4238FC006F9679 /* WKWebviewUITests.swift */; };
 		FBD79B2B2A4238FC006F9679 /* WKWebviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD79B2A2A4238FC006F9679 /* WKWebviewUITestsLaunchTests.swift */; };
+		FBD79B382A423A01006F9679 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD79B372A423A01006F9679 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FBA9B1A42A42599B001115F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FBD79B092A4238FB006F9679 /* WKWebview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD79B0C2A4238FB006F9679 /* WKWebviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebviewApp.swift; sourceTree = "<group>"; };
 		FBD79B0E2A4238FB006F9679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 		FBD79B242A4238FC006F9679 /* WKWebviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKWebviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD79B282A4238FC006F9679 /* WKWebviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebviewUITests.swift; sourceTree = "<group>"; };
 		FBD79B2A2A4238FC006F9679 /* WKWebviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FBD79B372A423A01006F9679 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 		FBD79B002A4238FB006F9679 = {
 			isa = PBXGroup;
 			children = (
+				FBD79B372A423A01006F9679 /* WebView.swift */,
 				FBD79B0B2A4238FB006F9679 /* WKWebview */,
 				FBD79B1D2A4238FC006F9679 /* WKWebviewTests */,
 				FBD79B272A4238FC006F9679 /* WKWebviewUITests */,
@@ -95,6 +99,7 @@
 		FBD79B0B2A4238FB006F9679 /* WKWebview */ = {
 			isa = PBXGroup;
 			children = (
+				FBA9B1A42A42599B001115F4 /* Info.plist */,
 				FBD79B0C2A4238FB006F9679 /* WKWebviewApp.swift */,
 				FBD79B0E2A4238FB006F9679 /* ContentView.swift */,
 				FBD79B102A4238FC006F9679 /* Assets.xcassets */,
@@ -261,6 +266,7 @@
 			files = (
 				FBD79B0F2A4238FB006F9679 /* ContentView.swift in Sources */,
 				FBD79B0D2A4238FB006F9679 /* WKWebviewApp.swift in Sources */,
+				FBD79B382A423A01006F9679 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +425,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WKWebview/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access for AR";
+				INFOPLIST_KEY_NSMotionUsageDescription = "The app needs motion access for AR";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -429,7 +439,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -457,6 +467,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WKWebview/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs camera access for AR";
+				INFOPLIST_KEY_NSMotionUsageDescription = "The app needs motion access for AR";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -467,7 +481,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
