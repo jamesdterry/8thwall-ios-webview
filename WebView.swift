@@ -31,7 +31,8 @@ struct WebView: UIViewRepresentable {
 
         let webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = context.coordinator
-        
+        webView.scrollView.contentInsetAdjustmentBehavior = .never
+
         let request = URLRequest(url: url)
         webView.load(request)
         
